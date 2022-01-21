@@ -1,0 +1,15 @@
+
+.container .btn {
+
+    margin-left: 50%;
+    margin-top: 15%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(238, 4, 4);
+    color: rgb(248, 241, 241);
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }

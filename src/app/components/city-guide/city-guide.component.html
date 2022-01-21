@@ -1,0 +1,20 @@
+<div class="container">
+
+<app-header></app-header>
+
+
+<h1>{{'Guide' | translate}}</h1>
+<br>
+
+<div class="guideOpt">
+    <div   *ngFor="let i of list">
+        <li  class="btn-op" (click)="checkGuideOption(i.id)" >{{i.name | translate}}</li>
+</div>
+</div>
+
+
+<button class="btn" (click)="goBack()">{{'Back' | translate}}</button>
+
+
+
+</div>

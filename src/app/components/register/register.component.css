@@ -1,0 +1,81 @@
+body {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+  height: 90vh;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 100%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 0px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container .loginBtn{
+  background-color: grey;
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  width: 100%;
+}
+
+.login-txt {
+    display: block;
+    text-align: center;
+}
+
+.errorMsg{
+  display: block;
+  text-align: center;
+}

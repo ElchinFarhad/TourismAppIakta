@@ -1,0 +1,32 @@
+<div class="container">
+
+    <app-header></app-header>
+
+
+    <h1>Where to Eat</h1>
+
+    <ng-template [ngIf]="choosedOpt===''">
+        <div class="guideOpt">
+            <div   *ngFor="let i of list">
+                <li (click)="chooseStayOption(i.name)"  class="btn-op"  >{{i.name}}</li>
+        </div>
+        </div>
+        <button class="btn" (click)="goBack()">Back</button>
+    </ng-template>
+
+    <ng-template [ngIf]="choosedOpt==='osterie'">
+        <div class="hero-list">
+         Osterie List...
+        </div>
+        <button class="btn" (click)="goBackStayOption()">Back</button>
+    </ng-template>
+    <ng-template [ngIf]="choosedOpt==='ristoranti'">
+        <div class="hero-list">
+         Ristoranti List...
+        </div>
+        <button class="btn" (click)="goBackStayOption()">Back</button>
+    </ng-template>
+
+    
+
+    </div>

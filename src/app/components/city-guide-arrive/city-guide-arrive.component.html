@@ -1,0 +1,38 @@
+<div class="container">
+
+    <app-header></app-header>
+    
+
+    <h1>How to Arrive</h1>
+    <br>
+
+    <ng-template [ngIf]="choosedOpt===''">
+    <div class="guideOpt">
+        <div   *ngFor="let i of list">
+            <li (click)="chooseArriveOption(i.name)"  class="btn-op"  >{{i.name}}</li>
+    </div>
+    </div>
+    <button class="btn" (click)="goBack()">Back</button>
+</ng-template>
+
+
+    <ng-template [ngIf]="choosedOpt==='aereo'">
+        <div class="hero-list">
+         Aereo
+        </div>
+        <button class="btn" (click)="goBackArriveOption()">Back</button>
+    </ng-template>
+    <ng-template [ngIf]="choosedOpt==='treno'">
+        <div class="hero-list">
+         Treno
+        </div>
+        <button class="btn" (click)="goBackArriveOption()">Back</button>
+    </ng-template>
+    <ng-template [ngIf]="choosedOpt==='automobile'">
+        <div class="hero-list">
+        Automobile
+        </div>
+        <button class="btn" (click)="goBackArriveOption()">Back</button>
+    </ng-template>
+
+    </div>

@@ -1,0 +1,17 @@
+
+        <app-header></app-header>
+      <div class="body">
+        <div   *ngFor="let i of areas">
+          <button class="btn" (click)="start(i.id)" >{{ i.area_name}}</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+      
+        <div class="container">
+          <carousel  class="crsl"  *ngIf="images.length > 0"  
+              [images]="images" > 
+          </carousel>
+        </div>
+      </div>

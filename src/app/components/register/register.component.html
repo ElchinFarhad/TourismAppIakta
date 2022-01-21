@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<h1>Tourism App</h1>
+<div class="container">
+  <form>
+    <div class="col">
+      <div class="login-txt">
+        <h1>Register</h1>
+      </div>
+      <input type="text" name="username" placeholder="Username" required [(ngModel)]="username">
+      <input type="password" name="password" placeholder="Password" required [(ngModel)]="password">
+      <input (click)="register()" type="submit" value="Register">
+    </div>
+    <div class="row"> 
+    </div>
+  </form>
+
+   <p [ngStyle]="{display: errorShow, color: errorColor }" class="errorMsg"> {{errorMsg}}</p> 
+
+      <button class="btn loginBtn" (click)="logIn()" style="color:rgb(15, 1, 1)" >Login</button>
+</div>
+</body>
+</html>

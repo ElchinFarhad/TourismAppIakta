@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!-- <span class="LeftBtn" style="font-size:40px;cursor:pointer" (click)="openNav()">&#9776;</span> -->
+    <img  class="Userlogo" src="../../../assets/user.png" (click)="openNav()" >
+     <img class="appLogo" src="../../../assets/logo1.png" (click)="switchMainPage()">
+     <span class="RightBtn" style="font-size:40px;cursor:pointer" (click)="openNav()">&#9776;</span>
+
+<div [ngStyle]="{height: header}"  id="myNav" class="overlay">
+  <a class="closebtn" (click)="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a >About</a>
+    <a>Contact</a>
+    <button (click)="logOut()" type="button" class="btn btn-default btn-sm">
+      <span class="glyphicon glyphicon-log-out"></span> Log out
+    </button>
+    <div>
+        <a>
+          {{'Sitetitle' | translate }}
+        </a>
+        <span class="form-inline">
+          <select class="form-control" #selectedLang (change)="switchLang(selectedLang.value)">
+            <option *ngFor="let language of translate.getLangs()" [value]="language"
+              [selected]="language === translate.currentLang">
+              {{ language }}
+            </option>
+          </select>
+        </span>
+      </div>
+  </div>
+</div>
+
+<!-- <img src="../../../assets/mainmenutop.png"  usemap="#citymap" hidefocus="true" class="topcontainer"> -->
+
+
+
+</body>
+</html>
+
+
